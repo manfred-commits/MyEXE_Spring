@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+	    <!-- link to google font -->
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- /link to google font -->
+		<title>Ordine Singolo</title>
+	</head>
+	<style>
+		/* reset rules */
+		*{
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		}
+		/* general rules*/
+		body{
+		    display: flex;
+		    flex-wrap:wrap;
+		    justify-content: center;
+		    align-content: center;
+		    height: 100vh;
+		    font-family: 'Roboto Mono', monospace;
+		}
+		h1{
+		    text-align: center;
+		    width: 100%;
+		    padding: 20px 0;
+		}
+		h4{
+			margin-top:.5rem;
+		}
+		a{
+			color:black;
+		}
+		a:hover{
+		    color: grey;
+		}
+		ul li{
+		list-style:none;
+		color:black;	
+		}
+		/*single order sec*/
+		.single-order-container{
+			text-align: center;
+		}
+		.single-order-container .col-divison{
+			margin: 0.5rem 0;
+		    display: flex;
+    		justify-content: space-between;
+		}
+		/*single order sec*/		
+	</style>
+	<body>
+		<div class="single-order-container">
+			<h2>Specifiche Ordine</h2>		
+			<div style=" display: flex; justify-content: space-between; margin: 0 0 .5rem;">
+				<a href="http://localhost:8080" >Home</a>
+				<a href="http://localhost:8080/myorderlist" >Pagina precedente</a>
+			</div>
+			<h2 th:text="'Cliente: '+${myorder.getMyCliente().getNome()}">sovrascritto</h2>
+			<p th:text="'Id: '+${myorder.getMyCliente().getIdCliente()}">sovrascritto</p>
+			<h3 th:text="'Totale: '+${myorder.getConto()}+' euro'"></h3>
+			<h4>Ordine:</h4>
+			<ul>
+				<li th:each="item: ${myorder.getMyList()}">
+					<span th:text="${item.getNome()}+ ': ' +${item.getPrezzo()} +' euro'"></span>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+	</body>
+</html>

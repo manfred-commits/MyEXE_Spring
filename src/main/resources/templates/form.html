@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="ISO-8859-1">
+	<!-- link to css sheet -->
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <!-- /link to css sheet -->
+    <!-- link to google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Form Ordine</title>
+	</head>
+	<body>
+		<h1>Crea un Ordine</h1>
+		<form action="/mypost" method="post">
+			<h3>Seleziona cibo</h3>
+			<hr>
+			<ul>
+				<li>
+					<h6>Hamburger:</h6>
+					<input name="hamburger" type="number" min="0">
+				</li>	
+				<li>
+					<h6>CheeseBurger:</h6>
+					<input name="cheeseBurger" type="number" min="0">
+				</li>
+				<li>
+					<h6>ChickenBurger:</h6>
+					<input name="chickenBurger" type="number" min="0">
+				</li>
+				<li>
+					<h6>Birra Bionda Media:</h6>
+					<input name="birraB" type="number" min="0">
+				</li>
+				<li>
+					<h6>Birra Rossa Media:</h6>
+					<input name="birraR" type="number" min="0">
+				</li>
+			</ul>
+			<hr>
+			<h3>Dati Cliente</h3>
+			Nome:<input type="text" name="nome"/>
+			Carta:<input type="text" name="cartaDiCredito"/>
+			<input type="submit" value="Invia"/> 
+		</form> 
+		
+	</body>
+</html>

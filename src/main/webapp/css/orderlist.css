@@ -1,0 +1,13 @@
+/*orders container*/
+.container-orders{
+	width:50%;
+}
+.container-orders .col-division{
+	width:100%;
+	text-align:center;
+	margin:.5rem 0;
+}
+.container-orders ul{
+	text-align:center;
+}
+/*/orders container*/

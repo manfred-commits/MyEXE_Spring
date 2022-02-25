@@ -1,0 +1,30 @@
+/* reset rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* general rules*/
+body{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+}
+h1{
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+a{
+	color:black;
+}
+a:hover{
+    color: grey;
+}
+ul li{
+	list-style:none;
+	color:black;	
+}

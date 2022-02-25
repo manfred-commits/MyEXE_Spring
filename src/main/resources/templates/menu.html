@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<!-- link to css sheet -->
+	    <link rel="stylesheet" href="./css/general.css">
+	    <link rel="stylesheet" href="./css/menu.css">
+	    <!-- /link to css sheet -->
+	    <!-- link to google font -->
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- /link to google font -->
+		<title>Menu</title>
+	</head>
+	<body>
+		<div class="menu-container">
+			<div class="col-division">
+				<h2>Menu</h2>
+				<a href="http://localhost:8080" >Torna alla Home</a>
+			</div>			
+			<ul>
+				<li th:each="item: ${mymenu.getMyList()}">
+					<span th:text="${item.getNome()}+ ': ' +${item.getPrezzo()} +' euro '+${item.getValoriNutrizionali()}"></span>
+				</li>
+			</ul>
+		</div>		
+	</body>
+</html>

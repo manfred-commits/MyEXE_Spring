@@ -1,0 +1,16 @@
+/*main container for menu*/
+.menu-container{
+	width:50%;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menu-container .col-division{
+	width:100%;
+	text-align:center;
+	margin:.5rem 0;
+}
+.menu-container ul{
+	text-align:center;
+}
+/*/main container for menu*/
